@@ -1,0 +1,19 @@
+/*
+ Theme Name:   Course Builder Child
+ Description:  Course Builder Child Theme
+ Author:       Zac Gordon
+ Author URI:   http://zacgordon.com
+ Template:     course-builder
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  course-builder
+*/
+
+.site-content-contain {
+    background: #FEEF97;
+}
+
+.custom-footer {
+    clear: both;
+}
