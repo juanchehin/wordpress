@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 
 <nav id="site-navigation" class="main-navigation" role="navigation">
-    <?php 
+    <?php
         $args = [
             'theme_location' => 'main-menu'
         ];
