@@ -1,4 +1,26 @@
 <?php get_header(); ?>
-    <h1>Esta es la pagina index.php</h1>
+    <div id="primary" class="content-area">
 
-<?php get_footer('splash'); ?>
+        <main id="main" class="site-main" role="main">
+
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        
+                <header class="entry-header">
+                    <h1> index.php </h1>
+                </header>
+
+                <div class="entry-content">
+                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                </div>
+
+                
+        
+            </article>
+
+        </main>
+
+    </div>
+
+    <?php get_sidebar(); ?>
+
+<?php get_footer(); ?>
