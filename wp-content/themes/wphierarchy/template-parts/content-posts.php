@@ -4,7 +4,13 @@
 
         <span class="dashicons dashicons-<?php echo get_post_format( $post->ID ); ?>"></span>
         
-        <?php the_title( '<h1>', '</h1>'); ?>
+        <?php 
+            the_title( '<h2><a href="' . esc_url( get_permalink() ) . '">', 
+            '</a></h2>'); ?>
+
+        <div class="byline">
+            <?php esc_html_e('Author: '); ?> <?php the_author(); ?>
+        </div>
 
     </header>
 
