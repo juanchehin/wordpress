@@ -209,6 +209,16 @@ article.post {
     float: right;
 }
 
+.home #secondary {
+    width: 100%;
+    float: both;
+}
+
+.home #secondary .widget {
+    width: 30%;
+    float: left;
+}
+
 #secondary h2 {
     font-size: 1.2rem;
 }
