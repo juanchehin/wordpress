@@ -14,12 +14,19 @@
 
     // Load in out CSS
     function wphierarchy_enqueue_styles() {
-        wp_enqueue_style('varela-font-css' , 'https://fonts.google.com/css?family=Varela+Round' , [] , time() , 'all');
+        wp_enqueue_style('varela-font-css' , 'https://fonts.googleapis.com/css2?family=Varela+Round&display=swap' , [] ,'' , 'all');
         wp_enqueue_style('main-css' , get_stylesheet_directory_uri() . '/style.css', ['varela-font-css'] , time() , 'all');
         wp_enqueue_style('custom-css' , get_stylesheet_directory_uri() . '/assets/css/custom.css', ['main-css'] , time() , 'all');
     }
-
     add_action('wp_enqueue_scripts','wphierarchy_enqueue_styles');
+
+    // Load in out JS
+    function wphierarchy_enqueue_scripts() {
+        // wp_enqueue_script('theme-js' , get_stylesheet_directory_uri() . '/assets/js/theme.css' , [] , time(), true);
+        wp_enqueue_script('jquery-theme-js' , get_stylesheet_directory_uri() . '/assets/js/theme.css' , ['jquery'] , time(), true);
+    }
+
+    add_action('wp_enqueue_scripts','wphierarchy_enqueue_scripts');
 
     // Register Menu Locations
     register_nav_menus([
