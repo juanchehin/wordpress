@@ -34,7 +34,7 @@
     ]);
 
     // Setup Widget Areas
-    /*function wphierarchy_widgets_init() {
+    function wphierarchy_widgets_init() {
         register_sidebar([
             'name' => esc_html__('Main Sidebar', 'wphierarchy'),
             'id' => 'main-sidebar',
@@ -44,7 +44,7 @@
             'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
         ]);
-        register_sidebar([
+        /*register_sidebar([
             'name' => esc_html__('Page Sidebar', 'wphierarchy'),
             'id' => 'page-sidebar',
             'description'   =>  esc_html__('Add widgets for page sidebar here', 'wphierarchy'),
@@ -61,8 +61,8 @@
             'after_widget' => '</section>',
             'before_title' => '<h2 class="widget-title">',
             'after_title' => '</h2>',
-        ]);
+        ]);*/
     }
-    add_action('widgets_init', 'wphierarchy_widgets_init');*/
+    add_action('widgets_init', 'wphierarchy_widgets_init');
 
 ?>
