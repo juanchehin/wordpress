@@ -11,6 +11,8 @@
 
             <p>Template: page.php</p>
 
+            <p> Permalink es <?php echo wp_get_shortlink(); ?> </p>
+
         </main>
 
     </div>

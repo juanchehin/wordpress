@@ -1,23 +1,61 @@
 <?php get_header(); ?>
-    <div id="primary" class="content-area">
 
-        <main id="main" class="site-main" role="main">
+  <div id="primary" class="content-area">
 
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <main id="main" class="site-main" role="main">
 
-                <?php get_template_part('template-parts/content' , get_post_format() ); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            <?php endwhile; else : ?>
+        <article <?php post_class(); ?>>
 
-                <?php get_template_part('template-parts/content', 'none'); ?>
+            <header class="entry-header">
+
+              <h1><?php the_title(); ?></h1>
+
+              <p class="byline">
+                <?php the_shortlink( 'Shortlink'); ?> -
+                <?php echo wp_get_shortlink(); ?>
+              </p>
+
+              <?php get_template_part( 'template-parts/byline' ); ?>
+
+            </header>
+
+          <div class="entry-content">
+
+            <?php the_content(); ?>
+
+            <h1> Post meta es  </h1>
+
+            <?php if ( !empty( get_post_meta( $post->ID, 'Location' ) ) ) : ?>
+
+              <hr>
+
+              <h1> Post meta 1 es  </h1>
+              
+              <p>
+                <?php esc_html_e( 'Post Meta: ', 'wptags' ); ?>
+                <?php the_meta(); ?>
+                <?php esc_html_e( 'Location: ', 'wptags' ); ?>
+                <?php echo get_post_meta( $post->ID, 'Location', true ); ?>
+              </p>
 
             <?php endif; ?>
 
-            <p> Template: single.php </p>
-        </main>
 
-    </div>
+          </div>
 
-    <?php get_sidebar(); ?>
+        </article>
+
+      <?php endwhile; endif; ?>
+
+      <p class="prev-posts"><?php previous_post_link(); ?></p>
+      <p class="next-posts"><?php next_post_link(); ?></p>
+
+    </main>
+
+  </div>
+
+  <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

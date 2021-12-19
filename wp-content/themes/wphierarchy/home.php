@@ -18,6 +18,7 @@
             <?php echo paginate_links(); ?>
 
             <p> Home.php </p>
+            
         </main>
 
     </div>

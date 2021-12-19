@@ -5,6 +5,8 @@
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+                <article id="post-<?php the_ID(); ?>" <?php post_class() ?>
+
                 <?php get_template_part('template-parts/content.php'); ?>
 
             <?php endwhile; else : ?>
@@ -46,7 +48,16 @@
 
             <p>Template: front-page.php</p>
 
+
             <?php get_sidebar('front-page'); ?>
+
+            
+            <h2>Este es el extracto</h2>
+
+            <?php get_template_part('template-parts/byline' , get_post_format() ); ?>
+
+            
+            <?php the_excerpt(); ?>
 
         </main>
 
