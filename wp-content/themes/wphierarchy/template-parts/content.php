@@ -9,11 +9,25 @@
     </header>
 
     <p> Content .php </p>
+    <p>Post Number: <?php the_ID(); ?></p>
+
+    <p>Post Title: <?php the_title(); ?></p>
+
+    <p>The excerpt : <?php the_excerpt(); ?></p>
 
     <div class="entry-content">
         <?php the_content(); ?>
     </div>
 
-    <?php comments_template(); ?>
+    <?php 
+        $attr = [
+            'class' => 'alignright',
+            'title' => get_the_title()
+        ];
+
+
+        the_post_thumbnail( 'medium', $attr );
+        
+    ?>
 
 </article>

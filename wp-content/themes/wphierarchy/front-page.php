@@ -48,7 +48,8 @@
 
             <p>Template: front-page.php</p>
 
-
+            <p>Post Number: <?php the_ID(); ?></p>
+            
             <?php get_sidebar('front-page'); ?>
 
             
