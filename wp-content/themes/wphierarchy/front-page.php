@@ -54,14 +54,25 @@
 
             
             <h2>Este es el extracto</h2>
+            <?php the_excerpt(); ?>
+
 
             <?php get_template_part('template-parts/byline' , get_post_format() ); ?>
 
-            
-            <?php the_excerpt(); ?>
+            <h2>Este es the_permalink</h2>
+            <?php the_permalink() ?>
+
+            <h2>Este es get_permalink()</h2>
+
+            <?php get_permalink() ?>    
+
+            <h2>Esto es home_url</h2>
+            <?php home_url() ?>
+
+            <h2>Este es site_url()</h2>
+            <?php site_url() ?>
 
         </main>
-
     </div>
 
 <?php get_footer(); ?>
